@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/53fe2192d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.2.0/ckeditor5.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="" type="image/x-icon" />
+    <title>CV Maker | Mulai Academy</title>
+</head>
+
+<body>
+    <nav class="bg-white fixed w-full z-40 top-0 start-0 border-b border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="../assets/images/logo.png" class="h-12" alt="Flowbite Logo">
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <form class="hidden md:block max-w-md mx-auto">
+                    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search"
+                            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Pencarian" required />
+                    </div>
+                </form>
+                <div class="ps-2 hidden md:flex flex-col md:flex-row">
+                    <a href=""
+                        class="me-0 md:me-2 my-2 md:my-auto text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">Masuk</a>
+                    <a href=""
+                        class="me-0 md:me-2 my-2 md:my-auto text-white bg-[#007bff] hover:bg-[#234972] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">Daftar</a>
+                </div>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="../index.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
+                            aria-current="page">Beranda</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="program-dropdown"
+                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Program
+                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="program-dropdown"
+                            class="md:z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="./career-research.html"
+                                            class="block px-4 py-2 hover:bg-gray-100">Career
+                                            Research</a>
+                                    </li>
+                                    <li>
+                                        <a href="./career-preparation.html"
+                                            class="block px-4 py-2 hover:bg-gray-100">Career
+                                            Preparation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Interview
+                                            Coaching</a>
+                                    </li>
+                                    <li>
+                                        <a href="./cv-maker.html" class="block px-4 py-2 hover:bg-gray-100">CV
+                                            Maker</a>
+                                    </li>
+                                    <li>
+                                        <a href="./cv-review.html" class="block px-4 py-2 hover:bg-gray-100">CV
+                                            Review</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Daftar
+                            Kelas</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Tentang
+                            Kami</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Blog</a>
+                    </li>
+                    <li>
+                        <form class="relative md:hidden max-w-md mx-auto">
+                            <label for="default-search"
+                                class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                    </svg>
+                                </div>
+                                <input type="search" id="default-search"
+                                    class="block w-full p-4 ps-10 text-sm text-gray-900 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder="Pencarian" required />
+                                <button type="submit"
+                                    class="invisible text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2"><i
+                                        class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i></button>
+                            </div>
+                        </form>
+                    </li>
+
+                    <div class="flex md:hidden flex-col md:flex-row">
+                        <a href=""
+                            class="mx-0 md:mx-2 my-1 md:my-auto text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ">Masuk</a>
+                        <a href=""
+                            class="mx-0 md:mx-2 my-1 md:my-auto text-white bg-[#007bff] hover:bg-[#234972] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">Daftar</a>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-24">
+        <div class="flex flex-col px-8 md:px-32 gap-4">
+            <h1 class="text-3xl font-semibold">CV Maker</h1>
+            <div class="flex flex-col md:flex-row justify-between">
+                <div id="accordion-collapse" class="w-full md:w-1/2" data-accordion="collapse">
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="objective-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#objective-data" aria-expanded="true"
+                                aria-controls="objective-data">
+                                <span><i class="fa-solid fa-bullseye fa-xl me-3"></i>Objektif</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="objective-data" class="hidden" aria-labelledby="objective-heading">
+                            <div class="p-3 flex flex-col gap-3">
+                                <i class="font-normal text-md mb-4"><i
+                                        class="fa-solid fa-circle-info me-3"></i>Deskripsikan
+                                    latar belakangmu,
+                                    seperti pendidikan, pengalaman karir atau keteratarikan yang relevan dengan
+                                    kualifikasi
+                                    pekerjaan yang dilamar.
+                                </i>
+                                <textarea name="objective" id="objektif" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="informasi-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-gray-200 bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#informasi-data" aria-expanded="false"
+                                aria-controls="informasi-data">
+                                <span><i class="fa-regular fa-user fa-xl me-3"></i>Informasi Pribadi</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="informasi-data" class="hidden" aria-labelledby="informasi-heading">
+                            <div class="p-3 flex flex-col gap-3">
+                                <div class="mb-3">
+                                    <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                        Lengkap <span class="text-red-500">*</span></label>
+                                    <input type="text" id="fullname" name="fullname"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                        oninput="this.setCustomValidity('')" />
+                                </div>
+                                <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                    <div>
+                                        <label for="email" class="mb-2 text-sm font-medium text-gray-900">Email <span
+                                                class="text-red-500">*</span></label>
+                                        <input type="email" id="email" name="email"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                            required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                            oninput="this.setCustomValidity('')" />
+                                    </div>
+                                    <div>
+                                        <label for="phonenumber" class="mb-2 text-sm font-medium text-gray-900">Nomor
+                                            HP <span class="text-red-500">*</span></label>
+                                        <input type="tel" id="phonenumber" name="phonenumber"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                            required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                            oninput="this.setCustomValidity('')" />
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="url_linkedin" class="block mb-2 text-sm font-medium text-gray-900">URL
+                                        Profil
+                                        LinkedIn <span class="text-red-500">*</span></label>
+                                    <input type="text" id="url_linkedin" name="url_linkedin"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                        oninput="this.setCustomValidity('')" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="url_portfolio" class="block mb-2 text-sm font-medium text-gray-900">URL
+                                        Portfolio/Situs
+                                        Web (Opsional)</label>
+                                    <input type="text" id="url_portfolio" name="url_portfolio"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Alamat
+                                        <span class="text-red-500">*</span></label>
+                                    <input type="text" id="address" name="address"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                        oninput="this.setCustomValidity('')" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="pendidikan-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#pendidikan-data" aria-expanded="false"
+                                aria-controls="pendidikan-data">
+                                <span><i class="fa-solid fa-graduation-cap fa-xl me-3"></i>Riwayat Pendidikan</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="pendidikan-data" class="hidden" aria-labelledby="pendidikan-heading">
+                            <div class="p-3 flex flex-col gap-3">
+                                <i class="font-normal text-md mb-4"><i class="fa-solid fa-circle-info me-3"></i>Lebih
+                                    baik
+                                    cantumkan riwayat
+                                    pendidikan terakhirmu saja untuk tampilan CV yang lebih baik.
+                                </i>
+                                <div id="pendidikan-container">
+                                    <div id="pendidikan-1"
+                                        class="flex flex-col mb-3 p-2 border border-blue-600 rounded-lg">
+                                        <button id="hapus-button" data-id="1" type="button"
+                                            class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">Hapus</button>
+                                        <div class="mb-3">
+                                            <label for="school_name-1"
+                                                class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                                Sekolah/Universitas <span class="text-red-500">*</span></label>
+                                            <input type="text" id="school_name-1" name="school_name[]"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                oninput="this.setCustomValidity('')" />
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-3">
+                                            <div>
+                                                <label for="year_start-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Tahun
+                                                    Mulai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="year_start-1" name="year_start[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="year_end-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Tahun
+                                                    Selesai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="year_end-1" name="year_end[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="location-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Lokasi
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="location-1" name="location[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="education_level-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Tingkat
+                                                    Pendidikan
+                                                    <span class="text-red-500">*</span></label>
+                                                <select id="education_level-1" name="education_level[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                                    <option selected>-- Pilih Tingkat Pendidikan --</option>
+                                                    <option value="E1">SMP</option>
+                                                    <option value="E2">SMA</option>
+                                                    <option value="E3">Sarjana</option>
+                                                    <option value="E4">Magister</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label for="study_program-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Program
+                                                    Studi
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="study_program-1" name="study_program[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="gpa-1" class="mb-2 text-sm font-medium text-gray-900">IPK
+                                                    (Opsional,
+                                                    lebih
+                                                    baik dimasukkan)</label>
+                                                <input type="text" id="gpa-1" name="gpa[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" />
+                                            </div>
+                                            <div>
+                                                <label for="max_gpa-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">IPK
+                                                    Maksimal</label>
+                                                <input type="text" id="max_gpa-1" name="max_gpa[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 flex flex-col">
+                                            <label for="description-1"
+                                                class="block mb-2 text-sm font-medium text-gray-900">Deskripsi
+                                                <span class="text-red-500">*</span></label>
+                                            <small class="mb-2">Jelaskan prestasi, kontribusi, atau proyek penelitian
+                                                kamu
+                                                selama
+                                                pendidikan.</small>
+                                            <textarea name="description" id="description-1" cols="30"
+                                                rows="10"></textarea>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="tambah-pendidikan" type="button"
+                                    class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+                                    Tambah Riwayat Pendidikan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="job-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#job-data" aria-expanded="true" aria-controls="job-data">
+                                <span><i class="fa-solid fa-briefcase fa-xl me-3"></i>Riwayat Pekerjaan</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="job-data" class="hidden">
+                            <div class="p-3 flex flex-col gap-3">
+                                <i class="font-normal text-md mb-4"><i class="fa-solid fa-circle-info me-3"></i>Lebih
+                                    baik
+                                    cantumkan riwayat
+                                    pendidikan terakhirmu saja untuk tampilan CV yang lebih baik.
+                                </i>
+                                <div id="job-container">
+                                    <div id="job-1" class="flex flex-col mb-3 p-2 border border-blue-600 rounded-lg">
+                                        <button id="job-hapus-button" data-id="1" type="button"
+                                            class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">Hapus</button>
+                                        <div class="mb-3">
+                                            <label for="place_name-1"
+                                                class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                                Instansi <span class="text-red-500">*</span></label>
+                                            <input type="text" id="place_name-1" name="place_name[]"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                oninput="this.setCustomValidity('')" />
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="job_position-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Jabatan/Bidang
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="job_position-1" name="job_position[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="employment_level-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Status
+                                                    Karyawan
+                                                    <span class="text-red-500">*</span></label>
+                                                <select id="employment_level-1" name="employment_level[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                                    <option selected>-- Pilih Status Karyawan --</option>
+                                                    <option value="J1">Fulltime</option>
+                                                    <option value="J2">Kontrak</option>
+                                                    <option value="J3">Magang</option>
+                                                    <option value="J4">Paruh Waktu</option>
+                                                    <option value="J4">Freelance</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-3">
+                                            <div>
+                                                <label for="job_start-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Mulai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="date" id="job_start-1" name="job_start[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="job_end-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Selesai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="date" id="job_end-1" name="job_end[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="job_location-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Lokasi <span
+                                                        class="text-red-500">*</span></label>
+                                                <input type="text" id="job_location-1" name="job_location[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 flex flex-col">
+                                            <label for="job_description-1"
+                                                class="block mb-2 text-sm font-medium text-gray-900">Deskripsi
+                                                <span class="text-red-500">*</span></label>
+                                            <small class="mb-2">Jelaskan hal yang kamu lakukan selama bekerja. Jelaskan
+                                                pencapaian kerjamu dengan angka agar lebih realistis</small>
+                                            <textarea name="job_description" id="job_description-1" cols="30"
+                                                rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="tambah-pekerjaan" type="button"
+                                    class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+                                    Tambah Riwayat Pekerjaan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="certificate-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#certificate-data" aria-expanded="true"
+                                aria-controls="certificate-data">
+                                <span><i class="fa-solid fa-certificate fa-xl me-3"></i>Sertifikasi/Lisensi</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="certificate-data" class="hidden">
+                            <div class="p-3 flex flex-col gap-3">
+                                <div id="certificate-container">
+                                    <div id="certificate-1"
+                                        class="flex flex-col mb-3 p-2 border border-blue-600 rounded-lg">
+                                        <button id="certificate-hapus-button" data-id="1" type="button"
+                                            class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">Hapus</button>
+
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="certificate_name-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                                    Sertifikasi/Lisensi <span class="text-red-500">*</span></label>
+                                                <input type="text" id="certificate_name-1" name="certificate_name[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="certificate_publisher-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Penerbit
+                                                    Sertifikasi/Lisensi
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="certificate_publisher-1"
+                                                    name="certificate_publisher[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="certificate_id-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Nomor
+                                                    Sertifikasi/Lisensi
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="certificate_id-1" name="certificate_id[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="certificate_year-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Tahun
+                                                    Sertifikasi <span class="text-red-500">*</span></label>
+                                                <input type="text" id="certificate_year-1" name="certificate_year[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="tambah-sertifikasi" type="button"
+                                    class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+                                    Tambah Sertifikasi/Lisensi</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="award-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#award-data" aria-expanded="true" aria-controls="award-data">
+                                <span><i class="fa-solid fa-trophy fa-xl me-3"></i>Penghargaan</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="award-data" class="hidden">
+                            <div class="p-3 flex flex-col gap-3">
+                                <i class="font-normal text-md mb-4"><i
+                                        class="fa-solid fa-circle-info me-3"></i>Cantumkan
+                                    penghargaan yang
+                                    relevan dengan posisi yang kamu lamar ya!
+                                </i>
+                                <div id="award-container">
+                                    <div id="award-1" class="flex flex-col mb-3 p-2 border border-blue-600 rounded-lg">
+                                        <button id="award-hapus-button" data-id="1" type="button"
+                                            class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">Hapus</button>
+
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="award_name-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                                    Penghargaan <span class="text-red-500">*</span></label>
+                                                <input type="text" id="award_name-1" name="award_name[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="award_publisher-1"
+                                                    class="mb-2 text-sm font-medium text-gray-900">Pemberi
+                                                    Penghargaan
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="award_publisher-1" name="award_publisher[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                                    required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="award_year-1"
+                                                class="block mb-2 text-sm font-medium text-gray-900">Tahun
+                                                Penerimaan <span class="text-red-500">*</span></label>
+                                            <input type="text" id="award_year-1" name="award_year[]"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                oninput="this.setCustomValidity('')" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="tambah-penghargaan" type="button"
+                                    class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+                                    Tambah Penghargaan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="skill-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#skill-data" aria-expanded="true" aria-controls="skill-data">
+                                <span><i class="fa-regular fa-lightbulb fa-xl me-3"></i>Skill</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="skill-data" class="hidden">
+                            <div class="p-3 flex flex-col gap-3">
+                                <div class="font-normal text-md mb-4 flex gap-2"><i
+                                        class="fa-solid fa-circle-info me-3"></i>
+                                    <div class="flex flex-col gap-1">
+                                        <i><strong>Hard Skill</strong> adalah kemampuan yang dapat diukur secara
+                                            kuantitatif,
+                                            seperti kemampuan bahas pemrograman, desain grafis, dan dll.</i>
+                                        <i><strong>Soft Skill</strong> adalah kemampuan yang sulit diukur secara
+                                            kuantitatif,
+                                            seperti kemampuan komunikasi, kerjasama tim, dan dll.</i>
+                                        <i><strong>Software Skill</strong> adalah kemampuan dalam menggunakan software
+                                            tertentu,
+                                            seperti Microsoft Office, Adobe Photoshop dan dll.</i>
+                                    </div>
+                                </div>
+                                <div id="skill-container">
+                                    <div id="skill-1" class="flex flex-col mb-3">
+                                        <div class="flex flex-col gap-2 mb-3">
+                                            <label for="hard_skill-1"
+                                                class="block text-sm font-medium text-gray-900">Hard
+                                                Skill
+                                                <span class="text-red-500">*</span></label>
+                                            <small>Pisahkan dengan koma (,)</small>
+                                            <input type="text" id="hard_skill-1" name="hard_skill"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                oninput="this.setCustomValidity('')" />
+                                        </div>
+                                        <div class="flex flex-col gap-2 mb-3">
+                                            <label for="soft_skill-1"
+                                                class="block text-sm font-medium text-gray-900">Soft
+                                                Skill
+                                                <span class="text-red-500">*</span></label>
+                                            <small>Pisahkan dengan koma (,)</small>
+                                            <input type="text" id="soft_skill-1" name="soft_skill"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                oninput="this.setCustomValidity('')" />
+                                        </div>
+                                        <div class="flex flex-col gap-2 mb-3">
+                                            <label for="software_skill-1"
+                                                class="block text-sm font-medium text-gray-900">Software
+                                                Skill <span class="text-red-500">*</span></label>
+                                            <small>Pisahkan dengan koma (,)</small>
+                                            <input type="text" id="software_skill-1" name="software_skill"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                required oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                oninput="this.setCustomValidity('')" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 mb-3">
+                        <h2 id="organization-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#organization-data" aria-expanded="true"
+                                aria-controls="organization-data">
+                                <span><i class="fa-solid fa-users fa-xl me-3"></i>Organisasi</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="organization-data" class="hidden">
+                            <div class="p-3 flex flex-col gap-3">
+                                <i class="font-normal text-md mb-4"><i class="fa-solid fa-circle-info me-3"></i>Lebih
+                                    baik
+                                    cantumkan riwayat
+                                    organisasi yang relevan dengan pekerjaan yang kamu lamar!
+                                </i>
+                                <div id="organization-container">
+                                    <div id="organization-1"
+                                        class="flex flex-col mb-3 p-2 border rounded-lg border-blue-600">
+                                        <button id="organization-hapus-button" data-id="1" type="button"
+                                            class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">Hapus</button>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="organization_position-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Jabatan/Bidang
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="organization_position-1"
+                                                    name="organization_position[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="organization_name-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                                    Instansi
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="organization_name-1" name="organization_name[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-3">
+                                            <div>
+                                                <label for="organization_start-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Tahun
+                                                    Mulai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="organization_start-1" name="organization_start[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="organization_end-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Tahun
+                                                    Selesai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="organization_end-1" name="organization_end[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="organization_location-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Lokasi
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="organization_location-1"
+                                                    name="organization_location[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 flex flex-col gap-2">
+                                            <label for="organization_description-1"
+                                                class="block text-sm font-medium text-gray-900">Deskripsi
+                                                <span class="text-red-500">*</span></label>
+                                            <small>Jelaskan peran, prestasi, dan kontribusimu selama di organisasi!
+                                                Jelaskan
+                                                keberhasilanmu dengan angka agar lebih realistis</small>
+                                            <textarea id="organization_description-1" name="organization_description[]"
+                                                rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="tambah-organisasi" type="button"
+                                    class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+                                    Tambah Organisasi</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col mb-3 gap-4">
+                        <h2 id="study-heading">
+                            <button type="button"
+                                class="flex items-center justify-between rounded-xl w-full p-5 font-medium rtl:text-right text-black hover:text-white bg-[#97c0ec] hover:bg-[#6a9dd4] gap-2"
+                                data-accordion-target="#study-data" aria-expanded="true" aria-controls="study-data">
+                                <span><i class="fa-solid fa-school fa-xl me-3"></i>Pendidikan Non Formal</span>
+                                <svg data-accordion-icon class="w-3 h-3 focus:rotate-180 shrink-0" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M9 5 5 1 1 5" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="study-data" class="hidden">
+                            <div class="p-3 flex flex-col gap-3">
+                                <i class="font-normal text-md mb-4"><i class="fa-solid fa-circle-info me-3"></i> Isikan
+                                    dengan
+                                    riwayat pendidikan non-formal kamu, seperti kursus, bootcamp, dsb.
+                                </i>
+                                <div id="study-container">
+                                    <div id="study-1" class="flex flex-col mb-3 p-2 border rounded-lg border-blue-600">
+                                        <button id="study-hapus-button" data-id="1" type="button"
+                                            class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">Hapus</button>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-2">
+                                            <div>
+                                                <label for="study_name-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                                    Kegiatan
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="study_name-1" name="study_name[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="organizer_name-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Penyelenggara
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="organizer_name-1" name="organizer_name[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="grid gap-6 mb-3 md:grid-cols-3">
+                                            <div>
+                                                <label for="study_start-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Tahun
+                                                    Mulai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="study_start-1" name="study_start[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="study_end-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Tahun
+                                                    Selesai
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="study_end-1" name="study_end[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                            <div>
+                                                <label for="study_location-1"
+                                                    class="block mb-2 text-sm font-medium text-gray-900">Lokasi
+                                                    <span class="text-red-500">*</span></label>
+                                                <input type="text" id="study_location-1" name="study_location[]"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                    oninvalid="this.setCustomValidity('Wajib Diisi')"
+                                                    oninput="this.setCustomValidity('')" />
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 flex flex-col gap-2">
+                                            <label for="study_description-1"
+                                                class="block text-sm font-medium text-gray-900">Deskripsi
+                                                <span class="text-red-500">*</span></label>
+                                            <small>Jelaskan kegiatan yang kamu ikuti dan pencapaian setelah mengikuti
+                                                kegiatan
+                                                tersebut.</small>
+                                            <textarea id="study_description-1" name="study_description[]"
+                                                rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="tambah-study" type="button"
+                                    class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
+                                    Tambah Pendidikan Non Formal</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.getElementById('objektif'), {
+                toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', 'undo', 'redo'],
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error('Error during initialization of the editor', error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.getElementById('description-1'), {
+                toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', 'undo', 'redo'],
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error('Error during initialization of the editor', error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.getElementById('study_description-1'), {
+                toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', 'undo', 'redo'],
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error('Error during initialization of the editor', error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.getElementById('organization_description-1'), {
+                toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', 'undo', 'redo'],
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error('Error during initialization of the editor', error);
+            });
+    </script>
+    <script>
+        ClassicEditor
+            .create(document.getElementById('job_description-1'), {
+                toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', 'undo', 'redo'],
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error('Error during initialization of the editor', error);
+            });
+    </script>
+    <script src="../assets/js/home/cv-maker.js"></script>
+    <script>
+        document.querySelector('button[aria-expanded="false"]').classList.remove('text-gray-500', 'dark:text-gray-400');
+    </script>
+</body>
+
+</html>

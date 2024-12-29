@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/53fe2192d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.2.0/ckeditor5.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="" type="image/x-icon" />
+    <title>CV Review | Mulai Academy</title>
+</head>
+
+<body>
+    <nav class="bg-white fixed w-full z-40 top-0 start-0 border-b border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="../assets/images/logo.png" class="h-12" alt="Flowbite Logo">
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <form class="hidden md:block max-w-md mx-auto">
+                    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search"
+                            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Pencarian" required />
+                    </div>
+                </form>
+                <div class="ps-2 hidden md:flex flex-col md:flex-row">
+                    <a href=""
+                        class="me-0 md:me-2 my-2 md:my-auto text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">Masuk</a>
+                    <a href=""
+                        class="me-0 md:me-2 my-2 md:my-auto text-white bg-[#007bff] hover:bg-[#234972] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">Daftar</a>
+                </div>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="/index.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent"
+                            aria-current="page">Beranda</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="program-dropdown"
+                            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Program
+                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="program-dropdown"
+                            class="md:z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                    <li>
+                                        <a href="./career-research.html"
+                                            class="block px-4 py-2 hover:bg-gray-100">Career
+                                            Research</a>
+                                    </li>
+                                    <li>
+                                        <a href="./career-preparation.html"
+                                            class="block px-4 py-2 hover:bg-gray-100">Career
+                                            Preparation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Interview
+                                            Coaching</a>
+                                    </li>
+                                    <li>
+                                        <a href="./cv-maker.html" class="block px-4 py-2 hover:bg-gray-100">CV
+                                            Maker</a>
+                                    </li>
+                                    <li>
+                                        <a href="./cv-review.html" class="block px-4 py-2 hover:bg-gray-100">CV
+                                            Review</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Daftar
+                            Kelas</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Tentang
+                            Kami</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 md:dark:hover:bg-transparent">Blog</a>
+                    </li>
+                    <li>
+                        <form class="relative md:hidden max-w-md mx-auto">
+                            <label for="default-search"
+                                class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                    </svg>
+                                </div>
+                                <input type="search" id="default-search"
+                                    class="block w-full p-4 ps-10 text-sm text-gray-900 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder="Pencarian" required />
+                                <button type="submit"
+                                    class="invisible text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2"><i
+                                        class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i></button>
+                            </div>
+                        </form>
+                    </li>
+
+                    <div class="flex md:hidden flex-col md:flex-row">
+                        <a href=""
+                            class="mx-0 md:mx-2 my-1 md:my-auto text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 ">Masuk</a>
+                        <a href=""
+                            class="mx-0 md:mx-2 my-1 md:my-auto text-white bg-[#007bff] hover:bg-[#234972] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2">Daftar</a>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-24">
+        <section class="mx-4 md:mx-8">
+            <div class="flex justify-between items-center px-2 md:px-20 py-4">
+                <div class="flex space-x-2">
+                    <a href="../career-preparation.html"
+                        class="mx-0 md:mx-2 my-1 md:my-auto text-[#007bff] border border-[#007bff] hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">Back</a>
+                    <a class="mx-0 md:mx-2 my-1 md:my-auto border border-[#007bff] hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-2 py-2 text-center me-2 mb-2"
+                        href="mission1.html">
+                        <svg class="text-[#007bff]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m15 19-7-7 7-7" />
+                        </svg>
+                    </a>
+                    <a class="mx-0 md:mx-2 my-1 md:my-auto border border-[#007bff] hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-2 py-2 text-center me-2 mb-2"
+                        href="mission3.html">
+                        <svg class="text-[#007bff]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m9 5 7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                <a href="/assets/content-mission/mission2.pdf" download
+                    class="ml-auto mx-0 md:mx-2 my-1 md:my-auto text-[#007bff] border border-[#007bff] hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2">
+                    Download File
+                </a>
+            </div>
+            <div class="px-2 md:px-44">
+                <img class="mb-4 rounded-xl md:rounded-3xl border border-gray-300" src="/assets/images/mission2.png"
+                    alt="">
+            </div>
+        </section>
+    </article>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
+</body>
+
+</html>
